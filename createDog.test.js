@@ -1,12 +1,12 @@
-const createDog = require('./createDog');
+const createDog = require('./createDog').default;
 
 describe('dog create function', () => {
   it('returns a dog object', () => {
-    const dog = createDog('ruby', 8, '25lbs');
+    const dog = createDog('spot', 10, '15lbs');
     expect(dog).toEqual({
-      name: 'ruby',
-      age: 8,
-      weight: '25lbs'
+      name: 'spot',
+      age: 10,
+      weight: '15lbs'
     });
   });
 });

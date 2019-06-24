@@ -1,11 +1,10 @@
-function createDog(name, age, weight) {
-  return {
-    name,
-    age,
-    weight
-  };
-}
-const dog = createDog('hazy', 5, '20lbs');
-console.log(dog);
+const createDog = require('./createDog').default;
 
-module.exports = createDog
+const name = process.argv[2];
+const age = process.argv[3];
+const weight = process.argv[4];
+
+const dog = createDog(name, age, weight);
+
+console.log(process.argv);
+console.log(dog);
